@@ -38,69 +38,68 @@ Sofern jemand einen interessanten Fork oder eine Übersetzung erstellt hat, der/
 <a name="terms-level-map"></a>
 ##### Levels/Maps
 
-Der Begriff "Map" bezieht sich im Allgemeinen auf das, was viele auch als "Level" bezeichnen und kann synonym verwendet werden. [Hier](https://en.wikipedia.org/wiki/Level_(video_gaming)) die Historie des Begriffs.
+Der Begriff "Map" (dt. "Karte") bezieht sich im Allgemeinen auf das, was viele auch als "Level" bezeichnen und kann synonym verwendet werden. [Hier](https://en.wikipedia.org/wiki/Level_(video_gaming)) die Historie des Begriffs.
 
 ##### Identifiers
-An `Identifier` is anything that resembles or serves as a "name". For example, the name of an asset, or the name of a material later, or a blueprint property, a variable, or a folder name, or for a data table row name, etc...
+Ein `Identifier` (dt. "Bezeichner") steht für alles, was einem "Namen" ähnelt oder explizit als solcher dient. Zum Beispiel der Name eines Assets, der Name eines Materials, eines Blueprint-Properties, einer Variablen, eines Ordnernamens, der Name einer Datentabelle usw.
 
 <a name="terms-cases"></a>
 ##### Cases
 
-There are a few different ways you can `CaseWordsWhenNaming`. Here are some common casing types:
+Es gibt verschiedene Ansätze für die Schreibweise von Bezeichnern. Hier sind einige gängige Schreibweisen:
 
 > ###### PascalCase
 >
-> Capitalize every word and remove all spaces, e.g. `DesertEagle`, `StyleGuide`, `ASeriesOfWords`.
+> Jedes Wort mit Großbuchstaben starten und auf Leerzeichen verzichten, z. B. `DesertEagle`, `StyleGuide`, `ASeriesOfWords`.
 > 
 > ###### camelCase
 >
-> The first letter is always lowercase but every following word starts with uppercase, e.g. `desertEagle`, `styleGuide`, `aSeriesOfWords`.
+> Erster Buchstabe klein geschrieben und jedes darauffolgende wird groß geschrieben, z. B. `desertEagle`, `styleGuide`, `aSeriesOfWords`.
 >
 > ###### Snake_case
 >
-> Words can arbitrarily start upper or lowercase but words are separated by an underscore, e.g. `desert_Eagle`, `Style_Guide`, `a_Series_of_Words`.
+> Wörter können beliebig mit Groß- oder Kleinbuchstaben beginnen, werden aber durch einen Unterstrich getrennt, z. B. `desert_Eagle`, `Style_Guide`, `a_Series_of_Words`.
 
 <a name="terms-var-prop"></a>
 ##### Variables / Properties
 
-The words 'variable' and 'property' in most contexts are interchangable. If they are both used together in the same context however:
+Die Begriffe "variable" (dt. Variable) und "property" (dt. Eigenschaft) sind in den meisten Zusammenhängen synonym verwendbar. Wenn sie jedoch im gleichen Kontext verwendet werden, gilt folgendes:
 
 <a name="terms-property"></a>
 ###### Property 
-Usually refers to a variable defined in a class. For example, if `BP_Barrel` had a variable `bExploded`, `bExploded` may be referred to as a property of `BP_Barrel`. 
+Bezieht sich üblicherweise auf eine Variable, die in einer Klasse definiert ist. Wenn zum Beispiel `BP_Barrel` eine Variable `bExploded` hatte, kann `bExploded` als Eigenschaft von `BP_Barrel` bezeichnet werden. 
 
-When in the context of a class, it is often used to imply accessing previously defined data.
+Im Zusammenhang mit einer Klasse wird der Begriff häufig verwendet, um den Zugriff auf zuvor definierte Daten zu implizieren.
 
 <a name="terms-variable"></a>
 ###### Variable 
-Usually refers to a variable defined as a function argument or a local variable inside a function.
-
-When in the context of a class, it is often used to convey discussion about its definition and what it will hold.
+Bezieht sich in der Regel auf eine Variable, welche als Funktionsparameter definiert oder als lokale Variable innerhalb einer Funktion definiert ist.
 
 <a name="0"></a>
-## 0. Principles
+## 0. Grundsätze
 
-These principles have been adapted from [idomatic.js style guide](https://github.com/rwaldron/idiomatic.js/).
+Die nachfolgenden Grundsätze sind stark an jene des [idomatic.js style guide](https://github.com/rwaldron/idiomatic.js/) angelehnt.
 
 <a name="0.1"></a>
-### 0.1 If your UE4 project already has a style guide, you should follow it.
+### 0.1 Wenn ein existierendes UE4-Projekt bereits einen Styleguide besitzt, sollte sich an diesen gehalten werden.
 
-If you are working on a project or with a team that has a pre-existing style guide, it should be respected.  Any inconsistency between an existing style guide and this guide should defer to the existing.
+Wenn an einem Projekt oder mit einem Team gearbeitet wird, das bereits einen Styleguide eingeführt hat, sollte dieser beibehalten werden. Bei Unstimmigkeiten oder Widersprüchen zwischen einem bestehenden Styleguide und dem vorliegenden Leitfaden sollte der bereits vorhandene Vorrang haben.
 
-Style guides should be living documents. You should propose style guide changes to an existing style guide as well as this guide if you feel the change benefits all usages.
+Styleguides sollten "lebendige" Dokumente sein. Wenn der Eindruck besteht, dass eine Änderung für alle Bereiche der Entwicklung von Vorteil ist, sollten diese Änderungen an einem bestehenden Styleguide und/oder an dem vorliegenden gemacht bzw. vorgeschlagen werden.
+
 
 > #### "Arguments over style are pointless. There should be a style guide, and you should follow it."
 > [_Rebecca Murphey_](https://rmurphey.com)
 
 <a name="0.2"></a>
-### 0.2 All structure, assets, and code in any Unreal Engine 4 project should look like a single person created it, no matter how many people contributed.
+### 0.2 Die gesamte Projektstruktur, die Assets und der Code eines Unreal Engine 4-Projekts sollten so aussehen, als ob sie von einer einzigen Person erstellt wurden, unabhängig davon, wie viele Personen an der Entwicklung beteiligt waren.
 
-Moving from one project to another should not cause a re-learning of style and structure. Conforming to a style guide removes unneeded guesswork and ambiguities.
+Der Wechsel von einem Projekt zum anderen sollte nicht dazu führen, dass Formatierung und Strukturierung neu erlernt werden müssen. Die Einhaltung eines Styleguides beseitigt unnötige Unklarheiten.
 
-It also allows for more productive creation and maintenance as one does not need to think about style. Simply follow the instructions. This style guide is written with best practices in mind, meaning that by following this style guide you will also minimize hard to track issues.
+Der Grundsatz ermöglicht auch eine produktivere Entwicklung und Wartung, da man nicht über Konventionen nachdenken muss. Hierbei werden einfach die Vorgaben befolgt. Dieser Styleguide wurde unter Berücksichtigung bewährter Vorgehensweisen verfasst, was bedeutet, dass durch die Befolgung dieses Styleguides auch schwer nachzuverfolgende Fehler minimiert werden können.
 
 <a name="0.3"></a>
-### 0.3 Friends do not let friends have bad style.
+### 0.3 Freunde lassen Freunde keinen schlechten Stil an den Tag legen.
 
 If you see someone working either against a style guide or no style guide, try to correct them.
 
