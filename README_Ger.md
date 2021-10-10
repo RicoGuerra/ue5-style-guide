@@ -101,72 +101,71 @@ Der Grundsatz ermöglicht auch eine produktivere Entwicklung und Wartung, da man
 <a name="0.3"></a>
 ### 0.3 Freunde lassen Freunde keinen schlechten Stil an den Tag legen.
 
-If you see someone working either against a style guide or no style guide, try to correct them.
+Bemerkt man jemanden, der/die entweder einen gegebenen Styl eguide nicht einhält oder ohne einen solchen arbeitet, sollte man diese Person korrigieren.
 
-When working within a team or discussing within a community such as [Unreal Slackers](http://join.unrealslackers.org/), it is far easier to help and to ask for help when people are consistent. Nobody likes to help untangle someone's Blueprint spaghetti or deal with assets that have names they can't understand.
+Wenn man in einem Team arbeitet oder in einer Community wie [Unreal Slackers] (http://join.unrealslackers.org/) miteinander kommuniziert, ist es viel einfacher zu helfen und um Hilfe zu bitten, wenn alle konsequent arbeiten. Niemand mag es, jemandem dabei zu helfen, seine Blueprint-Spaghettischüssel zu entwirren oder sich mit Assets zu beschäftigen, deren Namen man nicht verstehen kann.
 
-If you are helping someone whose work conforms to a different but consistent and sane style guide, you should be able to adapt to it. If they do not conform to any style guide, please direct them here.
+Wenn Sie jemandem helfen, dessen Arbeit einem anderen, aber konsistenten und vernünftigen Styleguide entspricht, sollten Sie in der Lage sein, sich diesem anzupassen. Wenn sie sich an keine Stilrichtlinien halten, verweisen Sie sie bitte hierher.
 
 <a name="0.4"></a>
-### 0.4 A team without a style guide is no team of mine.
+### 0.4 Ein Team ohne einen Styleguide ist kein Team für mich.
 
-When joining an Unreal Engine 4 team, one of your first questions should be "Do you have a style guide?". If the answer is no, you should be skeptical about their ability to work as a team.
+Wenn Sie einem Unreal Engine 4-Team beitreten, sollte eine Ihrer ersten Fragen lauten: "Habt ihr einen Styleguide?". Wenn die Antwort "Nein" lautet, sollten Sie skeptisch sein.
 
 <a name="0.5"></a>
-### 0.5 Don't Break The Law
+### 0.5 Brich nicht das Gesetz.
 
-Gamemakin LLC is not a lawyer, but please don't introduce illegal actions and behavior to a project, including but not limited to:
+Gamemakin LLC ist keine Anwaltskanzlei, aber bitte führen Sie keine illegalen Handlungen und Verhaltensweisen in ein Projekt ein, einschließlich aber nicht beschränkt auf die folgenden Punkte:
 
-* Don't distribute content you don't have the rights to distribute
-* Don't infringe on someone else's copyrighted or trademark material
-* Don't steal content
-* Follow licensing restrictions on content, e.g. attribute when attributions are needed
+* Verbreiten Sie keine Inhalte, für die Sie nicht die Rechte haben, sie zu verbreiten.
+* Verletzen Sie keine urheberrechtlich geschützten oder markenrechtlich geschützten Inhalte von anderen Personen.
+* Stehlen Sie keine Inhalte
+* Befolgen Sie die Lizenzbeschränkungen für Inhalte, z. B. geben Sie Quellen an, wenn diese erforderlich ist.
 
 <a name="00"></a>
-## 00. Globally Enforced Opinions
+## 00. Allgemeingültige Ansichten
 
 @TODO: Make this section 1 and update this document accordingly. Or maybe we don't?
 
 <a name="00.1"></a>
-### 00.1 Forbidden Characters
+### 00.1 Verbotene Zeichen
 
-#### Identifiers
+#### Bezeichner
 
-In any `Identifier` of any kind, **never** use the following unless absolutely forced to:
+In einem `Bezeichner` jeglicher Art darf **nie** das Folgende verwendet werden, es sei denn, es ist unbedingt erforderlich:
 
-* White space of any kind
-* Backward slashes `\`
-* Symbols i.e. `#!@$%`
-* Any Unicode character
+* Leerzeichen jeglicher Art
+* Schrägstrich `\`
+* Symbole, wie z. B. `#!@$%`
+* Jedes Unicode-Zeichen
 
-Any `Identifier` should strive to only have the following characters when possible (the RegEx `[A-Za-z0-9_]+`)
+Jeder `Bezeichner` sollte nach Möglichkeit nur die folgenden Zeichen enthalten (der RegEx `[A-Za-z0-9_]+`)
 
 * ABCDEFGHIJKLMNOPQRSTUVWXYZ
 * abcdefghijklmnopqrstuvwxyz
 * 1234567890
-* _ (sparingly)
+* _ (sparsam einsetzen)
 
-
-The reasoning for this is this will ensure the greatest compatibility of all data across all platforms across all tools, and help prevent downtime due to potentially bad character handling for identifiers in code you don't control.
+Der Grund dafür ist, dass dies die größtmögliche Kompatibilität aller Daten auf allen Plattformen und mit allen Werkzeugen sicherstellt und dazu beiträgt, Fehler oder Missverständnisse aufgrund einer potenziell schlechten Zeichenbehandlung für Bezeichner im Code zu vermeiden.
 
 <a name="toc"></a>
-## Table of Contents
+## Inhaltsverzeichnis
 
-> 1. [Asset Naming Conventions](#anc)
-> 1. [Directory Structure](#structure)
+> 1. [Asset-Namenskonventionen](#anc)
+> 1. [Verzeichnis-Struktur](#structure)
 > 1. [Blueprints](#bp)
 > 1. [Static Meshes](#s)
-> 1. [Particle Systems](#ps)
+> 1. [Partikelsysteme](#ps)
 > 1. [Levels / Maps](#levels)
-> 1. [Textures](#textures)
+> 1. [Texturen](#textures)
 
 <a name="anc"></a>
 <a name="1"></a>
-## 1. Asset Naming Conventions
+## 1. Asset-Namenskonventionen
 
-Naming conventions should be treated as law. A project that conforms to a naming convention is able to have its assets managed, searched, parsed, and maintained with incredible ease.
+Bezeichnungskonventionen sollten wie ein Gesetz angesehen werden. Ein Projekt, das sich an eine eine solche Konvention hält, kann seine Assets leichter verwalten, durchsuchen, analysieren und pflegen.
 
-Most things are prefixed with prefixes being generally an acronym of the asset type followed by an underscore.
+Den meisten Objekten wird ein Präfix vorangestellt, das in der Regel ein Akronym für den Asset-Typ gefolgt von einem Unterstrich ist.
 
 <a name="base-asset-name"></a>
 <a name="1.1"></a>
